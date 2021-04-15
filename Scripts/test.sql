@@ -30,3 +30,10 @@ order by BOARD_RE_REF desc, BOARD_RE_SEQ asc
 limit 10, 10;
 
 
+select BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT, BOARD_FILE, BOARD_RE_REF, BOARD_RE_LEV, BOARD_RE_SEQ, BOARD_READCOUNT, BOARD_DATE from board where BOARD_NUM;
+
+select count(*) from board;
+
+update board
+   set BOARD_READCOUNT = BOARD_READCOUNT +1
+ where BOARD_NUM = 65;

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+#articleForm {
+	width: 700px;
+	height: 500px;
+	border: 1px solid hotpink; 
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+}
+
+#basicInfoArea {
+	height: 50px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+span {
+	display: block;
+}
+#title{
+	margin-bottom: 10px;
+}
+
+#articleContentArea {
+	background: #f1c9e0;
+	height: 350px;
+	text-align: center;
+	overflow: auto;
+	padding: 10px;
+}
+
+#commandList {
+	margin: 20px auto;
+	width: 700px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}

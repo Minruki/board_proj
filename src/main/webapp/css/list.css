@@ -8,12 +8,16 @@ h4 {
 }
 
 section {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 
-.split {
-	height: 1em;
+section#list {
+	height: 460px;
+}
+
+section#pageList{
+	text-align: center;
 }
 
 table {
@@ -23,9 +27,9 @@ table {
 	text-align: center;
 }
 
-table tbody td {
-	padding: 7px 7px;
-	border: 1px solid #ff80c0;
+table td {
+	padding: 5px 5px;
+	border: 1px solid #f1c9e0;
 	border-top: 0;
 }
 
@@ -33,13 +37,13 @@ table td:nth-child(1){
 	width: 10%;
 }
 table td:nth-child(2){
-	width: 50%;
+	width: 45%;
 }
 table td:nth-child(3){
 	width: 15%;
 }
 table td:nth-child(4){
-	width: 15%;
+	width: 20%;
 }
 table td:nth-child(5){
 	width: 10%;
@@ -53,14 +57,6 @@ a {
 	text-decoration: none;
 }
 
-#pageList {
-	margin: auto;
-	width: 500px;
-	text-align: center;
-}
-
-#emptyArea {
-	margin: auto;
-	width: 500px;
-	text-align: center;
+span{
+	color: pink;
 }

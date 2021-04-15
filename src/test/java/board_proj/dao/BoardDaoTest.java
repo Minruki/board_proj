@@ -6,9 +6,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 
 import org.junit.After;
-
 import org.junit.Assert;
-
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -52,25 +50,21 @@ public class BoardDaoTest {
 
 	@Test
 	public void test03SelectArticleList() {
-		System.out.println("testSelectArticleList");
+		System.out.println("testSelectArticleList()");
 		int page = 1;
 		int limit = 10;
 		ArrayList<BoardDTO> list = dao.selectArticleList(page, limit);
 		Assert.assertNotNull(list);
 		
 		list.stream().forEach(System.out::println);
-		System.out.println("==============");
-		dao.selectArticleList(2, 10).parallelStream().forEach(System.out::println);
+		
+		System.out.println("===================");
+		dao.selectArticleList(2, 10).stream().forEach(System.out::println);
 	}
-
-	@Test
-	public void test05SelectArticle() {
-		fail("Not yet implemented");
-	}
-
+	
 	@Test
 	public void test04InsertArticle() {
-		System.out.println("testInsertArticle");
+		System.out.println("testInsertArticle()");
 		BoardDTO article = new BoardDTO(
 				"김상건", 
 				"1234", 
@@ -79,6 +73,24 @@ public class BoardDaoTest {
 				"test.txt");
 		int res = dao.insertArticle(article);
 		Assert.assertEquals(1, res);
+	}
+
+	@Test
+	public void test05SelectArticle() {
+		System.out.println("test05SelectArticle()");
+		int board_num = 74;
+		BoardDTO article = dao.selectArticle(board_num);
+		Assert.assertNotNull(article);
+		System.out.println(article);
+	}
+
+	@Test
+	public void test06UpdateReadCount() {
+		System.out.println("test06UpdateReadCount()");
+		int board_num = 74;
+		int res = dao.updateReadCount(board_num);
+		Assert.assertEquals(1, res);
+		System.out.println("res >> " + res);
 	}
 
 	@Test
@@ -93,11 +105,6 @@ public class BoardDaoTest {
 
 	@Test
 	public void testDeleteArticle() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUpdateReadCount() {
 		fail("Not yet implemented");
 	}
 
