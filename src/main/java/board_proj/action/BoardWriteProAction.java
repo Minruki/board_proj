@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
-import board_pro.service.BoardWriteService;
 import board_proj.dto.ActionForward;
 import board_proj.dto.BoardDTO;
+import board_proj.service.BoardWriteService;
 
 public class BoardWriteProAction implements Action {
 
@@ -46,20 +46,17 @@ public class BoardWriteProAction implements Action {
 		BoardWriteService service = new BoardWriteService();
 		boolean result = service.registerArticle(boardDTO);
 		
-		
 		ActionForward forward = null;
 		if (result) {
 			forward = new ActionForward();
 			forward.setRedirect(true);
 			forward.setPath("boardList.do");
-			
 		}else {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('등록실패')");
-			out.println("history.back()");
+			out.println("history.back();");
 			out.println("</script>");
-			
 		}
 
 		return forward;

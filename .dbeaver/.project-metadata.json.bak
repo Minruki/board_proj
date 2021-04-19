@@ -1,1 +1,1 @@
-{"resources":{"Scripts/ddl.sql":{"sql-editor-data-source-id":"mysql8-178c48a3eb4-2a1addeb632adf0d","default-datasource":"mysql8-178c48a3eb4-2a1addeb632adf0d","default-catalog":"web_gradle_erp"}}}
+{"resources":{"Scripts/ddl.sql":{"sql-editor-data-source-id":"mysql8-178ca0aca94-5abf3cd539e2735","default-datasource":"mysql8-178ca0aca94-5abf3cd539e2735","default-catalog":"web_gradle_erp"},"Scripts/test.sql":{"sql-editor-data-source-id":"mysql8-178ca0aca94-5abf3cd539e2735","default-datasource":"mysql8-178ca0aca94-5abf3cd539e2735","default-catalog":"web_gradle_erp"}}}

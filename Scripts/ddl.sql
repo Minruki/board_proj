@@ -15,6 +15,3 @@ create table if not exists web_gradle_erp.board(
 	PRIMARY KEY(BOARD_NUM)
 ); 
 
-select BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT, BOARD_FILE, BOARD_RE_REF, BOARD_RE_LEV, BOARD_RE_SEQ, BOARD_READCOUNT, BOARD_DATE
-from board order by BOARD_RE_REF desc, BOARD_RE_SEQ asc limit 0, 10;
-

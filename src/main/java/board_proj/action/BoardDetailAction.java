@@ -6,9 +6,9 @@ package board_proj.action;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import board_pro.service.BoardDetailService;
 import board_proj.dto.ActionForward;
 import board_proj.dto.BoardDTO;
+import board_proj.service.BoardDetailService;
 
 public class BoardDetailAction implements Action {
 

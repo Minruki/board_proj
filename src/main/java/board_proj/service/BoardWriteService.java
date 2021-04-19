@@ -1,4 +1,4 @@
-package board_pro.service;
+package board_proj.service;
 
 import java.sql.Connection;
 

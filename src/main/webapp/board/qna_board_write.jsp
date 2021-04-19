@@ -10,7 +10,7 @@
 <body>
 	<!-- 게시판 등록 -->
 	<section id="writeForm">
-		<h2>게시판글등록</h2>
+		<h2>게시판 글 등록</h2>
 		<form action="boardWritePro.do" method="post" enctype="multipart/form-data" name="boardform">
 			<table>
 				<tbody>

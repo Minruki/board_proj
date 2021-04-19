@@ -1,4 +1,4 @@
-package board_pro.service;
+package board_proj.service;
 
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -22,5 +22,4 @@ public class BoardListService {
 	public ArrayList<BoardDTO> getArticleList(int page, int limit){
 		return dao.selectArticleList(page, limit);
 	}
-	
 }
