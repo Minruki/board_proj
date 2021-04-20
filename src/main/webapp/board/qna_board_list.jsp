@@ -69,6 +69,8 @@
 					<a href="boardList.do?page=${a}">[${a}]</a>&nbsp;
 				</c:otherwise>
 			</c:choose>
+	
+
 		</c:forEach>
 		
 		<c:choose>
@@ -79,6 +81,7 @@
 				<a href="boardList.do?page=${pageInfo.page +1}">[다음]</a>&nbsp;
 			</c:otherwise>
 		</c:choose>
+	
 	</section>
 </body>
 </html>
