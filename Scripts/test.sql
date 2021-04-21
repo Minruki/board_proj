@@ -9,7 +9,7 @@ select * from board where BOARD_NUM = 26;
 
 INSERT INTO web_gradle_erp.board
 (BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT, BOARD_FILE, BOARD_RE_REF)
-VALUES(4, '김상건', '1111', '마칠시간', '5시', 'test.txt', 0);
+VALUES(35, '이민정', '1111', '나비', '5시', 'test.txt', 0);
 
 -- listcount
 select count(*) from board;
@@ -43,7 +43,7 @@ update board
  where BOARD_NUM = 23;
 
 -- 글 삭제
-select * from board where board_num = 23;
+select * from board where board_num = 22;
 
 delete 
   from board
@@ -64,13 +64,13 @@ set BOARD_SUBJECT = 'aaa', BOARD_CONTENT = 'aaa' where BOARD_NUM = 22;
 select * from board where BOARD_NUM = 23;
 
 -- 23 글에 대한 답변
-update board set BOARD_RE_SEQ=BOARD_RE_SEQ+1 
+update board set BOARD_RE_SEQ = BOARD_RE_SEQ+1 
  where BOARD_RE_REF= 23 and BOARD_RE_SEQ > 0;
 
 insert into board 
 (BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT, BOARD_FILE, 
  BOARD_RE_REF, BOARD_RE_LEV, BOARD_RE_SEQ) 
-values(26, '김상건?111', '1111', '6시', 'ggggg', '', 24, 1, 1);
+values(38, '김상건?111', '1111', '6시', 'ggggg', '', 23, 0, 0);
 
 select BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT
      , BOARD_FILE, BOARD_RE_REF, BOARD_RE_LEV, BOARD_RE_SEQ, BOARD_READCOUNT, BOARD_DATE

@@ -11,7 +11,7 @@
 
 <%=JndiDS.getConnection() %>
 <br>
-<a href="boardWriteForm.do">게시판글쓰기</a>
+<a href="boardWriteForm.do">게시판 글쓰기</a>
 <br>
 <a href="boardList.do">게시판 목록</a>
 
