@@ -7,6 +7,6 @@
 <title>Null Error</title>
 </head>
 <body>
-객체 생성
+객체 미생성
 </body>
 </html>

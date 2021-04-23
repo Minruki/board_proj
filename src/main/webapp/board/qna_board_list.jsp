@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
@@ -21,9 +20,9 @@
 		</article>
 		<article id="content">
 			<table border="1">
-				<tr>
+				<tr >
 					<td>번호</td>
-					<td>제목</td>
+					<td id="t_content">제목</td>
 					<td>작성자</td>
 					<td>날짜</td>
 					<td>조회수</td>
@@ -34,16 +33,11 @@
 							<tr>
 								<td>${board.board_num}</td>
 								<td>
-								   
-								    <c:if test="${board.board_re_lev ne 0 }">
-								    <c:forEach var="i" begin="1" end="${board.board_re_lev * 2}" >
-								    	&nbsp;
-								    </c:forEach>
-								    	└
-								    </c:if>
-								    <a href="boardDetail.do?board_num=${board.board_num}&page=${pageInfo.page }">${board.board_subject}</a>
-								
-								
+									<c:if test="${board.board_re_lev ne 0}">
+										<c:forEach var="i" begin="1" end="${board.board_re_lev}" >&nbsp;</c:forEach>
+										└
+									</c:if>
+									<a href="boardDetail.do?board_num=${board.board_num}&page=${pageInfo.page }">${board.board_subject}</a>
 								</td>
 								<td>${board.board_name}</td>
 								<td>${board.board_date}</td>
@@ -78,8 +72,6 @@
 					<a href="boardList.do?page=${a}">[${a}]</a>&nbsp;
 				</c:otherwise>
 			</c:choose>
-	
-
 		</c:forEach>
 		
 		<c:choose>
@@ -90,7 +82,6 @@
 				<a href="boardList.do?page=${pageInfo.page +1}">[다음]</a>&nbsp;
 			</c:otherwise>
 		</c:choose>
-	
 	</section>
 </body>
 </html>

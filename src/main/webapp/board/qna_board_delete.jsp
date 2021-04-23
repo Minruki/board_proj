@@ -12,10 +12,9 @@
 <%-- ${page }<br>${board_num } --%>
 
 	<section >
-		<form name="deleteForm"
-			action="boardDeletePro.do" >
+		<form name="deleteForm" method="post" action="boardDeletePro.do" >
 			<input type="hidden" name="page" value="${page }" />
-			<input type="hidden" name="board_num" value="${board_num }" />
+			<input type="hidden" name="board_num" value="${board_num }">
 			<fieldset id="passForm">
 				<legend>게시글 삭제</legend>
 				<ul>
