@@ -15,4 +15,28 @@ create table if not exists web_gradle_erp.board(
 	PRIMARY KEY(BOARD_NUM)
 ); 
 
+CREATE TABLE if not exists web_gradle_erp.users (
+	uid	    INT	NOT NULL AUTO_INCREMENT,
+	id   	VARCHAR(12) NOT NULL UNIQUE COMMENT '아이디', -- 아이디
+	passwd  CHAR(41)    NOT NULL COMMENT '비밀번호', -- 비밀번호
+	email   VARCHAR(60) COMMENT '이메일', -- 이메일
+	PRIMARY KEY (UID)
+)
+COMMENT '사용자';
+
+
+INSERT INTO users(id, passwd, email) 
+       VALUES('test1', password('1234'), 'test1@test.co.kr');
+
+INSERT INTO users(id, passwd, email) 
+       VALUES('test2', password('1234'), 'test2@test.co.kr');
+
+      select * from users;
+
+select * from users;
+
+SELECT id 
+  FROM users 
+ WHERE id = 'test1' 
+   AND passwd = password('1234');
 
